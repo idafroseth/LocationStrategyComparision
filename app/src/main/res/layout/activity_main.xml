@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="blog.appitude.locationcomparator.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/text_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Started: "
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_feedback"
+            android:background="@color/colorLightGrayBackground"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/text_power_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:soundEffectsEnabled="false"
+                android:text="@string/power_consumption_label"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_timestamp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/layout_power"
+            android:paddingBottom="@dimen/btn_bottom_padding"
+            android:paddingTop="@dimen/btn_top_padding"
+            android:text="timestamp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_stop"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btn_timestamp"
+            android:paddingBottom="@dimen/btn_bottom_padding"
+            android:paddingTop="@dimen/btn_top_padding"
+            android:text="Stop"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/btn_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btn_timestamp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_geo_new"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="0dp"
+                android:paddingBottom="@dimen/btn_bottom_padding"
+                android:paddingTop="@dimen/btn_top_padding"
+                android:text="New location straegy" />
+
+            <Button
+                android:id="@+id/btn_geo_old"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/btn_geo_new"
+                android:layout_below="@+id/btn_geo_new"
+                android:paddingBottom="@dimen/btn_bottom_padding"
+                android:paddingTop="@dimen/btn_top_padding"
+                android:text="Old location strategy" />
+
+            <Button
+                android:id="@+id/btn_geo_google_balance"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_geo_old"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="@dimen/btn_bottom_padding"
+                android:paddingTop="@dimen/btn_top_padding"
+                android:text="Google Balanced" />
+
+            <Button
+                android:id="@+id/btn_geo_baseline"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/btn_geo_google_balance"
+                android:paddingBottom="@dimen/btn_bottom_padding"
+                android:paddingTop="@dimen/btn_top_padding"
+                android:text="Google Baseline" />
+
+            <!--Button
+        android:text="Google Accurate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_geo_accurate"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:paddingTop="@dimen/btn_top_padding"
+        android:paddingBottom="@dimen/btn_bottom_padding"
+        android:layout_below="@+id/btn_geo_google_balance"
+        android:layout_alignParentEnd="true" /-->
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

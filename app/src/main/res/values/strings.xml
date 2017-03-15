@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LocationComparator</string>
+    <string name="power_consumption_label"><u>Power consumption</u></string>
+</resources>
